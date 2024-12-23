@@ -167,7 +167,7 @@ hr {
 }
 
 .job {
-  flex: 1 1 calc(10%); /* Ensures each box takes 48% of the width minus the gap */
+  flex: 2 2 2 calc(40%); /* Ensures each box takes 48% of the width minus the gap */
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
@@ -177,14 +177,13 @@ hr {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  transform: skew(-15deg); /* Keeps the skew effect */
+  
   position: relative;
   box-sizing: border-box;
 }
 
 .job-title {
   height: 400px;
-  padding: 100px;
   font-weight: bold;
   font-size: 1.2em;
   background-size: cover; /* Ensure the image covers the entire background */
@@ -192,6 +191,7 @@ hr {
   color: rgb(255, 255, 255);
   transition: transform 0.9s ease-in-out;
 }
+
 
 .job-description {
   position: absolute;
@@ -281,7 +281,7 @@ hr {
 </div>
 <div class = "page_padding_boxes">
   <div class="employment-history">
-    <div class="job">
+    <div class="job" style = "transform: skew(-5deg);">
       <div class="job-title" style = "background-image: url('Documents/BH Logo.jpg')"></div>
       <div class="job-description">
         <p>Balaclava Hotel</p>
@@ -297,7 +297,35 @@ hr {
       </div>
     </div>
   </div>
-    <div class="job">
+    <div class="job" style = "transform: skew(+5deg);">
+      <div class="job-title" style = "background-image: url('Documents/BH Logo.jpg')">Greek Folk Dance Instructor</div>
+      <div class="job-description">
+        <p>Organisation: Local Church</p>
+        <p>Duration: March 2022 - Present</p>
+        <p>Responsibilities: Teaching traditional dances, organising performances, and event planning.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class = "page_padding_boxes">
+  <div class="employment-history">
+    <div class="job" style = "transform: skew(+5deg);">
+      <div class="job-title" style = "background-image: url('Documents/BH Logo.jpg')"></div>
+      <div class="job-description">
+        <p>Balaclava Hotel</p>
+        <p>Duration: January 2023 - Present</p>
+        <ul>
+          <li>Managed staff and ensured efficient operations during shifts, overseeing a team of over 15 employees.</li>
+          <li>Directed the day-to-day operations of the venue, ensuring a smooth and seamless guest experience.</li>
+          <li>Utilised strong problem-solving skills to address and resolve operational and guest-related issues promptly.</li>
+          <li>Handled conflict management effectively, mediating disputes and ensuring a positive and professional work environment.</li>
+          <li>Maintained accurate financial records, including cash handling, reconciliation, and reporting.</li>
+          <li>Responsible for the venue, usually being the sole manager on duty.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="job" style = "transform: skew(-5deg);">
       <div class="job-title">Greek Folk Dance Instructor</div>
       <div class="job-description">
         <p>Organisation: Local Church</p>
