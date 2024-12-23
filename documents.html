@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AWOOWEB</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+h1,h2{
+  font-family: "Lato", sans-serif;
+  color: #000
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  color: #000;
+}
+.no-break{
+  line-height: 0;
+  font-family: "Lato", sans-serif;
+  color: #000;
+}
+h4 {
+  color: #373737;
+  font-style: italic;
+
+}
+
+br {
+  line-height: 1px;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+
+}
+
+.plain {
+  color: white;
+  text-align: center;
+}
+
+hr {
+  height: 2px;
+  background-color: #000;
+  border: none;
+}
+
+.align-con {
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-break { 
+  margin: 0;
+  padding: 0;
+}
+
+.eldate {
+  color: black;
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("black.jpg");
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+.bgimg-11 { /* Logo ontop of TRRANS BLACK */
+  background-image: url("logo");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-11 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+.collapsible {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="landing.html" class ="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i>HOME</a>
+    <a href="main.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> DIGITAL RESUME</a>
+    <a href="documents.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-address-card"></i> PROOF OF DOCUMENTS</a>
+  </div>
+
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="landing.html" class ="w3-bar-item w3-button w3-hide-small" onclick="toggleFunction()">HOME</a>
+    <a href="main.html" class="w3-bar-item w3-button" onclick="toggleFunction()">DIGITAL RESUME</a>
+    <a href="documents.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PROOF OF DOCUMENTS</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle">
+        <image src="logo.png" alt="background black"></image>
+  </div>
+</div>
+
+
+
+
+
+<!-- Using W3's easy container css for documents -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <div><h1 class ="w3-center">Proof of Documentation</h1></div>
+
+
+  <div class="w3-center" id="resume">
+    <h3>RSA Certificates</h3>
+    <a class="fa fa-file w3-hover-opacity" href="Documents\Andre RSA.pdf" download="Andre_RSA_Code.pdf"></a>
+    <a class="w3-hover-text-blue" href="Documents\Andre RSA.pdf" download="Andre_RSA_Code.pdf">RSA CC</a>
+    <br>
+    <a class="fa fa-file w3-hover-opacity" href="Documents\Andre RSAC.pdf" download="Andre_RSAC_Code.pdf"></a>
+    <a class="w3-hover-text-blue" href="Documents\Andre RSAC.pdf" download="Andre_RSA_Code.pdf">RSA Cert of Completion</a>
+  </div>
+
+  <div class="w3-center" id="resume">
+    <h3>RSG Certificates</h3>
+    <a class="fa fa-file w3-hover-opacity" href="Documents\Module1.pdf" download="Andre_RSG_Mod1.pdf"></a>
+    <a class="w3-hover-text-blue" href="Documents\Module1.pdf" download="Andre_RSG_Mod1.pdf">RSG Module 1 Certificate</a>
+    <br>
+    <a class="fa fa-file w3-hover-opacity" href="Documents\Module2.pdf" download="Andre_RSG_Mod2.pdf"></a>
+    <a class="w3-hover-text-blue" href="Documents\Module2.pdf" download="Andre_RSG_Mod2.pdf">RSG Module 2 Certificate</a>
+    <br>
+    <a class="fa fa-file w3-hover-opacity" href="Documents\Module3.pdf" download="Andre_RSG_Mod3.pdf"></a>
+    <a class="w3-hover-text-blue" href="Documents\Module3.pdf" download="Andre_RSG_Mod3.pdf">RSG Module 3 Certificate</a>
+  </div>
+
+
+  
+  
+    <h3 class="w3-center">Car and Motorbike Licence</h3>
+    <br>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col s6">
+        <img src="Documents\DL Front.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Front">
+      </div>
+
+      <div class="w3-col s6">
+        <img src="Documents\DL Back.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Back">
+      </div>
+
+    </div>
+</div>
+
+  <h3 class="w3-center">Handgun Licence</h3>
+  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col s6">
+        <img src="Documents\PHL Front.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Front">
+      </div>
+
+        <div class="w3-col s6">
+          <img src="Documents\PHL Back.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Back">
+        </div>
+    </div>
+  </div>
+
+<h3 class="w3-center">Working With Childrens Check</h3>
+  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col s6">
+        <img src="Documents\WWCC Front.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Front">
+      </div>
+
+        <div class="w3-col s6">
+          <img src="Documents\WWCC Back.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Back">
+        </div>
+    </div>
+  </div>
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <h2 class="plain">GO TO:</h2>
+  <div>
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </div>
+  <br>
+  <div>
+    <a href="main.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-left w3-margin-right"></i>Digital Resume</a>
+  </div>
+  <br>
+  <div>
+    <a href="landing.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-right w3-margin-right"></i>Home Page</a>
+  </div>
+  <div class="w3-xlarge w3-section">
+    <p>Find me on    |<i class="fa fa-linkedin w3-hover-opacity"></i>|</p>
+    
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Collpasable List 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AWOOWEB</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+h1,h2{
+  font-family: "Lato", sans-serif;
+  color: #000
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  color: #000;
+}
+.no-break{
+  line-height: 0;
+  font-family: "Lato", sans-serif;
+  color: #000;
+}
+h4 {
+  color: #373737;
+  font-style: italic;
+
+}
+
+br {
+  line-height: 1px;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+
+}
+
+.plain {
+  color: white;
+  text-align: center;
+}
+
+hr {
+  height: 2px;
+  background-color: #000;
+  border: none;
+}
+
+.align-con {
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-break { 
+  margin: 0;
+  padding: 0;
+}
+
+.eldate {
+  color: black;
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("black.jpg");
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+.bgimg-11 { /* Logo ontop of TRRANS BLACK */
+  background-image: url("logo");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-11 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+.collapsible {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="main.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+    <a href="#resume" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> DIGITAL RESUME</a>
+    <a href="documents.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PROOF OF DOCUMENTS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="main.html" class="w3-bar-item w3-button" onclick="toggleFunction()">DIGITAL RESUME</a>
+    <a href="documents.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PROOF OF DOCUMENTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="resume">
+  <div class="w3-display-middle">
+        <image src="logo.png" alt="background black"></image>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="resume">
+  <h2 class="w3-centre"> WHAT IS AWOOWEB?</h2>
+  <h3 class="w3-centre">Well, let me break it down!</h3>
+  <h4> Here you'll find all my documents in corellation to my professional career as well as, descriptions explanations and a web version ofS my resume. This site hosts all things in one place to make it easier for any employer to access information whenever the need. This site also includes a informative digital resume that gets updated.</h4>
+    <div>
+      <h2>Digital Resume<br></h2>
+      
+      <div>
+        <img src="andre.jpg" class="logo" alt="Avatar">
+      </div>
+      <div class = "align-con">
+        <h3>Mobile number</h4>
+        <h3>Email Address</h3>
+        <h3>Address</h3>
+      </div>
+      <div class = "align-con">
+        <h3><a title="W3.CSS" target="_blank" class="w3-hover-text-blue" href = "tel:+61491164594">+61491164594</a></h4>
+        <h3><a title="W3.CSS" target="_blank" class="w3-hover-text-green" href = "mailto:woop.andre@gmail.com">woop.andre@gmail.com</a></h3>
+        <h3><a title="W3.CSS" target="_blank" class="w3-hover-text-red" href= "https://www.google.com/maps?sca_esv=53e748caa665f952&sca_upv=1&rlz=1C1ONGR_en-GBAU1020AU1020&output=search&q=balaclava&source=lnms&entry=mc&ved=1t:200715&ictx=111>">Balaclava</a></h3>
+      </div>
+      
+      <br>
+      <br>
+      <h2 class = 'no-break'>Profile</h2>
+      <hr>
+      <h4>Driven and passionate student and worker actively seeking a dynamic role that involves regular course-related work to thrive my passion for computing technologies, possessing a strong sense of work drive, I thrive when taking initiative, while maintaining a collaborative and easy-to-work-with demeanour. With extensive experience in team and management settings, I bring a proven track record of fostering productive and harmonious work environments.</h4>
+      <br>
+      <h2 class = 'no-break'>Employment History</h2>
+      <hr>
+      <br>
+      <h3 class = 'no-break'>McDonalds</h3>
+      <div class = 'align-con'>
+        <h4>Crew, Elsernwick Branch</h4>
+        <p class = "eldate">April 2017 - May 2018</p>
+      </div>
+      <ul>
+        <li>Engaged in a diverse range of tasks at McDonald's, including order management for drive-through and table service, beverage, dessert and all food safe handling </li>
+        <li>Demonstrated efficiency, friendliness, and proficiency with point-of-sale systems, enabling excellence in service delivery.</li>
+        <li>Cultivated and refined customer service skills through extensive experience, consistently providing exemplary service to every individual encountered.</li>
+      </ul>
+      <br>
+      <h3 class = 'no-break'>Phasefale Controls PTY LTD.</h3>
+      <div class = 'align-con'>
+        <h4>Assisting with orders and quality control</h4>
+        <p class ='eldate'>December 2018 - Septemper 2022</p>
+      </div>
+      <ul>
+        <li>Ensured adherence to set quality assurance standards for products and packaging, catering to international and domestic orders.</li>
+        <li>Exercised unwavering precision and meticulous attention to detail while examining products.</li>
+        <li>Played a crucial role in the efficient execution of orders, coordinating timely production, careful packaging, and prompt dispatch of goods.</li>
+        <li>Contributed to the seamless fulfillment of customer expectations, reinforcing Phasefale's reputation as a reliable and customer-centric organisation.</li>
+      </ul>
+      <br>
+      <h3 class = 'no-break'>Balaclava Hotel</h3>
+      <div class = 'align-con'>
+        <h4>Duty Manager</h4>
+        <p class = 'eldate'>December 2021 - Present</p>
+      </div>
+      <ul>
+        <li>Managed staff and ensured efficient operations during shifts, overseeing a team of over 15 employees.</li>
+        <li>Directed the day-to-day operations of the venue, ensuring a smooth and seamless guest experience.</li>
+        <li>Utilised strong problem-solving skills to address and resolve operational and guest-related issues promptly.</li>
+        <li>Handled conflict management effectively, mediating disputes and ensuring a positive and professional work environment.</li>
+        <li>Maintained accurate financial records, including cash handling, reconciliation, and reporting.</li>
+        <li>Responsible for the venue, usually being the sole manager on duty.</li>
+      </ul>
+      <br>
+    <h3 class = 'no-break'>Monash University</h3>
+    <div class = 'align-con'>
+      <h4>Contracted Seasonal IT Service Support</h4>
+      <p class = 'eldate'>October 2023 - November 2024 </p>
+    </div>
+    <ul>
+      <li>Played a crucial role as an IT support professional at Monash for high-volume periods.</li>
+      <li>Responsible for identifying technical issues and effectively managing, resolving and/or escalating them for swift resolution.</li>
+      <li>Demonstrated critical thinking and task prioritisation skills, considering the time-sensitive nature of many problems.</li>
+      <li>Learning and understanding Monash is house and allocated systems to diagnose and support others.</li>
+    </ul>
+    </div>
+    <br>
+    <br>
+    <h2 class = 'no-break'>Qualifications</h2>
+    <hr>
+    <br>
+
+    <h3 class = 'no-break'>Caulfield Grammar School</h3>
+    <h4>January 2016 - Novermber 2021</h4>
+    <ul>
+      <li>Completion of VCE Year 12</li>
+      <li>Certificate of Excellence at the Bronze Level</li>
+      <li>CUA20615 Certificate II in Music Industry</li>
+    </ul>
+    <br>
+
+    <h3 class = 'no-break'>Completed Units of Competency</h3>
+    <h4>January 2016 - Novermber 2021</h4>
+    <ul>
+      <li>SITHKOP101 – Clean kitchen premises and equipment</li>
+      <li>SITXFSA101 – Use hygienic practices for food safety</li>
+      <li>SITHFAB002 – Provide responsible service of alcohol</li>
+      <li>Module 1 – Responsible Service of Gaming</li>
+      <li>Module 2 – Responsible Service of Gaming</li>
+    </ul>
+    <br>
+    
+    <h3 class = 'no-break'>Licences</h3>
+    <ul>
+      <li>Responsible Gambling Officer Licence</li>
+      <li>Victorian Drivers Licence</li>
+      <li>Victorian Motorbike Licence</li>
+      <li>Victorian Provisional Hangun Licence</li>
+      <li>Working With Childrens Check</li>
+    </ul>
+    <br>
+
+    <h3 class = 'no-break'>Royal Melbourne Institute of Technology</h3>
+    <h4>July - Present</h4>
+    <ul><li>Bachelor of Computer Science</li></ul>
+
+
+  <p><i class="fa fa-book"></i>  Current Uni Load</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+  <br>
+  <br>
+
+  <h2 class ='no-break'>Proficient Hobbies</h2>
+  <hr>
+  <h3>Computer Hardware Enthusiast</h3>
+  <ul>
+    <li>Passionate about staying ahead of the latest advancements in computer hardware, ensuring knowledge is current with new technology</li>
+    <li>Skilled in diagnosing and resolving hardware issues through self-taught techniques and hands-on experience</li>
+    <li>Dedicated to assembling and upgrading computer systems, optimising performance and enhancing user experience</li>
+    <li>Committed to continuous learning and development in the field of computer technology, often participating in online forums and communities</li>
+  </ul>
+  <br>
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <h2 class ='plain'>References</h2>
+  </div>
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <div class="w3-half w3-section">
+      <details>
+      <summary class = "w3-xlarge" >Annette Whyte<a href = "https://www.thebalaclavahotel.com.au/" class="w3-hover-text-blue"><h4 class = "plain" style = "line-height: 0px">Balaclava Hotel</a></summary>
+        <br>
+        <option value = 'role'>Venue Manager</option>
+        <option value = 'number'>(03) 9531 2709</option>
+        <option value = 'email'>Annette.Whyte@alhgroup.com.au</option>
+    </details>
+    </div>
+    <div class="w3-half w3-section">
+      <details>
+        <summary class = "w3-xlarge" >Brett Reaby<a href = "https://phasefale.com.au" class="w3-hover-text-blue"><h4 class = "plain" style = "line-height: 0px">Phasefale Controls PTY LTD.</a></summary>
+          <br>
+          <option value = 'role'>Electrical Engineer and Managing Director</option>
+          <option value = 'number'>(03) 9584 5590</option>
+          <option value = 'email'>b.reaby@phasefale.com.au</option>
+      </details>
+    </div>
+  </div>
+
+</div>
+
+  
+
+
+
+<!-- Container (DRIVER LICENCE) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <div><h1 class ="w3-center">Proof of Documentation</h1></div>
+  
+    <h3 class="w3-center">Car and Motorbike Licence</h3>
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m3">
+        <img src="place_holder.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="VIC Standard">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="place_holder.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="VIC Slimline">
+      </div>
+
+    </div>
+</div>
+
+<!-- Container (DRIVER LICENCE) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+
+  <h3 class="w3-center">Car and Motorbike Licence</h3>
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="place_holder.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="VIC Standard">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="place_holder.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="VIC Slimline">
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">PLATES COVERS AU</h3>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="logo.png" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Melbourne, Australia<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:  awoo.service@gmail.com<br>
+      </div>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#resume" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <p>View me on    |<i class="fa fa-linkedin w3-hover-opacity"></i>|</p>
+    
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Collpasable List 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
